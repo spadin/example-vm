@@ -5,6 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "breqwatr/trusty64"
+  config.vm.box_download_insecure = true
 
   # port 3000 on the vm can be reached on port 6000 of the host machine
   config.vm.network "forwarded_port", guest: 3000, host: 6000
